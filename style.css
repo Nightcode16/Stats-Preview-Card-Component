@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: 400 0.9375rem 'Inter', sans-serif;
+}
+
+:root {
+  --main-bg: hsl(232, 47%, 7%);
+  --card-bg: hsl(242, 38%, 16%);
+  --accent: hsl(277, 42%, 49%);
+  --main-h-stats: hsl(0, 0%, 100%);
+  --main-p: hsl(237, 10%, 64%);
+  --stat-h: hsl(240, 67%, 99%);
+}
+
+p {
+  color: var(--main-p);
+}
+
+h1,
+h2,
+strong {
+  color: var(--stat-h);
+  font-size: min(1.875rem, 2rem);
+  font-weight: 700;
+}
+
+strong {
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  background-color: var(--card-bg);
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: auto;
+}
+
+.header {
+  background: url("./images/image-header-mobile.jpg") center/100% 100% no-repeat;
+  height: 15rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent);
+  opacity: 0.4;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.title {
+  padding: 1.5rem;
+}
+
+.title p {
+  padding: 2rem;
+  line-height: 1.5rem;
+}
+
+.stats {
+  padding-bottom: 1.5rem;
+}
+
+.stats p {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 2rem;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.templates {
+  margin-block: 1.5rem;
+}
+
+.companies h2 {
+  text-transform: lowercase;
+}
+
+@media (min-width: 55rem) {
+  main {
+    max-width: 62.5rem;
+    height: 23.75rem;
+    display: flex;
+    flex-flow: row-reverse;
+    text-align: left;
+    margin: auto;
+  }
+
+  h1 {
+    padding-left: 2rem;
+    font-size: 2.2rem;
+  }
+
+  strong {
+    font-size: 2.2rem;
+  }
+
+  .header,
+  .overlay {
+    width: 100%;
+    height: 23.75rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem 0 3.2rem;
+  }
+
+  .content {
+    margin-right: 3rem;
+   }
+}
+
+h2:hover,
+.attribution a {
+  cursor: pointer;
+  color: var(--accent);
+}
+
+.overlay:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.attribution a:hover {
+  color: var(--accent);
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--main-p);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
